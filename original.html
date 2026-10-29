@@ -1,0 +1,857 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Armindo Ramalho Empreendimentos | Engenharia &amp; Arquitetura de Alto Padrão</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,600;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #F6F4EE;
+        color: #141414;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .text-stroke {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "color-paper": "#F6F4EE",
+            "color-surface": "#FFFFFF",
+            "color-ink": "#141414",
+            "color-ink-soft": "#202020",
+            "color-muted": "#7A7873",
+            "color-line": "#E4E2DC",
+            "color-line-dark": "#2A2A28",
+            "surface-dark": "#111111",
+            "surface-dark-card": "#181816",
+            "accent": "#C9A86A"
+          },
+          fontFamily: {
+            sans: ["Space Grotesk", "sans-serif"],
+            display: ["Space Grotesk", "sans-serif"]
+          },
+          letterSpacing: {
+            tighter: '-0.04em',
+            tight: '-0.02em',
+            normal: '0em',
+            wide: '0.04em',
+            wider: '0.08em',
+            widest: '0.14em'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-color-paper font-sans text-color-ink antialiased selection:bg-color-ink selection:text-color-paper">
+<!-- NAVBAR FLUTUANTE ULTRA LIMPA & EDITORIAL -->
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 px-6 md:px-12 py-5 border-b border-white/10 backdrop-blur-md bg-color-ink/40 text-color-paper" id="main-header">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<a class="flex items-center gap-3.5 group" href="#">
+<img alt="Armindo Ramalho Empreendimentos" class="h-9 w-auto object-contain filter invert opacity-95 transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMHCM-t-Pf-B2PTnHeYHGRN2-81qMkyj_ayqfWcQwVNlhrcP87w1fUPi-pJgBdk_O1EfxXCWDeFJjtJfdtjlah3jZIt6jFQr8WiHXI833EznyF9zHGeu2TuEF9E4w5mHJYKbpNAq7qkRm4VQJwZdSs2QbtzUzI9eBl27GFfGCxjjTBijqhEA2br_MBeCeGBAiWOoK1eYVHavtJ3qXHg4gop6PvNufof36o4DmvnNa2Ri6r2zGm31mG86pgGf5vKnHzfM">
+<div class="flex flex-col">
+<span class="text-xs tracking-[0.24em] uppercase font-bold text-color-paper leading-tight group-hover:text-white transition-colors">Armindo Ramalho</span>
+<span class="text-[9px] tracking-[0.32em] uppercase text-color-paper/60 font-medium">Empreendimentos</span>
+</div>
+</a>
+<!-- Desktop Links -->
+<nav class="hidden lg:flex items-center gap-10 text-[11px] uppercase tracking-[0.2em] font-medium text-color-paper/80">
+<a class="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all" href="#curadoria">Empreendimentos</a>
+<a class="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all" href="#comercial">Obras Corporativas</a>
+<a class="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all" href="#manifesto">Manifesto &amp; Solidez</a>
+<a class="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all" href="#pilares">Pilares</a>
+<a class="hover:text-white transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-[1px] after:bg-white after:transition-all" href="#contato">Contato</a>
+</nav>
+<!-- CTA Contact / WhatsApp -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center gap-2 px-4 py-2 text-[10px] uppercase tracking-[0.2em] font-semibold border border-white/30 text-white rounded-none hover:bg-white hover:text-color-ink transition-all duration-300" href="https://wa.me/5513997849288" target="_blank">
+<span class="material-symbols-outlined text-sm font-normal">north_east</span>
+<span class="">(13) 99784-9288</span>
+</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir Menu" class="lg:hidden p-2 text-white focus:outline-none" id="mobile-menu-button">
+<span class="material-symbols-outlined text-2xl" id="mobile-menu-icon">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown -->
+<div class="hidden lg:hidden w-full pt-4 pb-2 border-t border-white/10 mt-3 text-color-paper" id="mobile-menu">
+<nav class="flex flex-col space-y-3 text-[11px] uppercase tracking-[0.2em] px-2 font-medium">
+<a class="hover:text-white py-1.5" href="#curadoria">Empreendimentos</a>
+<a class="hover:text-white py-1.5" href="#comercial">Obras Corporativas</a>
+<a class="hover:text-white py-1.5" href="#manifesto">Manifesto &amp; Solidez</a>
+<a class="hover:text-white py-1.5" href="#pilares">Pilares</a>
+<a class="hover:text-white py-1.5" href="#contato">Contato</a>
+<a class="inline-flex items-center justify-center gap-2 py-2.5 mt-2 border border-white/40 text-center" href="https://wa.me/5513997849288" target="_blank">
+<span class="">WhatsApp (13) 99784-9288</span>
+</a>
+</nav>
+</div>
+</header>
+<main class="w-full">
+<!-- SECTION 1: HERO MONUMENTAL & CINEMATOGRÁFICO (Estilo HESTIA, Referência 02) -->
+<section class="relative w-full min-h-[92vh] lg:min-h-screen flex flex-col overflow-hidden bg-surface-dark text-color-paper justify-between" id="hero"><!-- Background Image (Burger King reference photograph IMAGE_14) -->
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-1000 scale-100" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBOhKlMsP5xosl4yl71CU2IShpQWfioP4-CWKrbS-TUxo8eNkv4Dc114XsIduoZgR1FqqLSX1fbp_X0v4z-3fjXY4pVzhf3tmioxZ3PP7iGEq2vH8iT6U7PSq-acVVDW3ggk06EaCOV-JYxYElkKOq_nfQEp0fR2vZNGpwBcZ6YWtBAnYLbccaMJ7ikVx_uLroiZs0p4XTynIqM47-1Xu6Y_S380Xf6TvQ04-1zkTVpL-b1Sd5daGqRtOfYBCKGTUG9Zjw&quot;); background-position: center 25%;"></div>
+
+<!-- Atmospheric Dark Overlays for legibility matching IMAGE_2 -->
+<div class="absolute inset-0 bg-surface-dark/60 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/40 to-transparent pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-dark/80 via-transparent to-surface-dark/40 pointer-events-none"></div>
+
+<!-- Architectural Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-[0.05]" style="background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px), linear-gradient(rgba(255, 255, 255, 0.2) 1px, transparent 1px);"></div>
+
+<!-- 1. Upper Technical Meta Bar (Below Navbar) -->
+
+
+<!-- 2. Mid Technical Framing Bar & Monumental Display -->
+<div class="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 flex-1 flex flex-col py-10 justify-end pt-32"><!-- Technical Overline & Micro-Indicators -->
+  <div class="flex items-center gap-4 flex-wrap mb-6 text-[10px] md:text-[11px] uppercase tracking-[0.26em] font-mono text-white/80">
+    <div class="inline-flex items-center gap-2 px-2.5 py-1 bg-white/10 backdrop-blur-md border border-white/20 text-white font-medium">
+      <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+      <span class="">EST. 1999</span>
+    </div>
+    <span class="hidden sm:inline-block w-8 md:w-16 h-[1px] bg-white/30"></span>
+    <span class="text-white/70 tracking-[0.24em] font-sans font-light text-[10px] md:text-xs">
+      ATELIÊ DE ARQUITETURA &amp; ENGENHARIA DE PRECISÃO
+    </span>
+    <span class="text-white/40 font-mono hidden md:inline-block">//</span>
+    <span class="text-white/60 text-[10px] hidden md:inline-block font-mono tracking-[0.2em]">
+      OBRAS AUTORAIS
+    </span>
+  </div>
+
+  <!-- Single Monumental Architectural Typography -->
+  <div class="space-y-1 select-none">
+    <!-- Linha 1: ARMINDO -->
+    <div class="flex items-baseline gap-4 flex-wrap">
+      <h1 class="text-[clamp(3.5rem,10vw,8.5rem)] font-bold uppercase tracking-tight text-white leading-[0.88] drop-shadow-sm font-sans">
+        ARMINDO
+      </h1>
+    </div>
+
+    <!-- Linha 2: Hairline Axis + Marker + RAMALHO + Glassmorphism Badge -->
+    <div class="flex items-center gap-4 md:gap-6 flex-wrap pt-1">
+      <!-- Hairline rule with crosshair marker -->
+      <div class="flex items-center gap-1.5 flex-shrink-0">
+        <span class="w-8 md:w-20 h-[1px] bg-white/30 inline-block"></span>
+        <span class="text-[10px] font-mono text-white/50 leading-none">+</span>
+      </div>
+      
+      <!-- RAMALHO in sculpted italic display -->
+      <span class="text-[clamp(3.5rem,10vw,8.5rem)] font-light italic tracking-tight uppercase text-white/95 leading-[0.9] drop-shadow-sm font-sans">
+        RAMALHO
+      </span>
+
+      <!-- Glassmorphic Monospace Badge -->
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 text-[10px] md:text-[11px] tracking-[0.2em] uppercase font-mono text-white shadow-sm mt-2 sm:mt-0">
+        <span class="w-1.5 h-1.5 bg-white/70 inline-block"></span>
+        <span class="">01 // EMPREENDIMENTOS</span>
+      </div>
+    </div>
+  </div></div>
+
+<!-- 3. Lower Manifesto (Esquerda) + Metrics (Direita) -->
+<div class="relative z-10 max-w-7xl mx-auto w-full px-6 md:px-12 pb-12 pt-2">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end border-t border-white/20 pt-8">
+    <!-- Manifesto & CTAs -->
+    <div class="lg:col-span-7 space-y-5">
+      <div class="space-y-2">
+        <h2 class="text-xs md:text-sm font-bold uppercase tracking-wider text-white font-mono">
+          ARQUITETURA DE AUTORIDADE. ENGENHARIA DE PRECISÃO.
+        </h2>
+        <p class="text-sm md:text-base text-white/90 font-light tracking-wide leading-relaxed max-w-xl font-sans">
+          Criamos marcos perenes e patrimônio de alto padrão para marcas multinacionais e residências exclusivas no litoral paulista.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 pt-1">
+        <!-- Button 1: White solid pill/rectangle -->
+        <a class="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-color-ink text-[11px] font-bold uppercase tracking-[0.2em] hover:bg-color-paper transition-all group" href="https://wa.me/5513997849288" target="_blank">
+          <span class="">Consultoria WhatsApp</span>
+          <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_outward</span>
+        </a>
+        <!-- Button 2: Translucent dark button with thin border -->
+        <a class="inline-flex items-center gap-2 px-6 py-3.5 border border-white/30 bg-surface-dark/40 text-white text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-white/10 transition-colors backdrop-blur-md" href="#curadoria">
+          <span class="">Ver Casos de Engenharia</span>
+          <span class="material-symbols-outlined text-sm">south</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Metrics Panel Side by Side Matching IMAGE_2 -->
+    <div class="lg:col-span-5 grid grid-cols-3 gap-6 text-white">
+      <div class="space-y-1">
+        <span class="block text-2xl md:text-3xl font-bold tracking-tight text-white">+25</span>
+        <span class="text-[9px] md:text-[10px] uppercase tracking-[0.22em] text-white/70 font-mono block leading-tight">Anos de Marco</span>
+      </div>
+      <div class="space-y-1">
+        <span class="block text-2xl md:text-3xl font-bold tracking-tight text-white">100%</span>
+        <span class="text-[9px] md:text-[10px] uppercase tracking-[0.22em] text-white/70 font-mono block leading-tight">Auditoria Jurídica</span>
+      </div>
+      <div class="space-y-1">
+        <span class="block text-xl md:text-2xl font-bold tracking-tight text-white">BTS</span>
+        <span class="text-[9px] md:text-[10px] uppercase tracking-[0.22em] text-white/70 font-mono block leading-tight">Built-To-Suit</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+<!-- SECTION 2: DESTAQUES & GRANDES OBRAS (Composição Assimétrica Editorial) -->
+<section class="w-full py-24 lg:py-32 bg-color-paper" id="curadoria">
+<div class="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
+<!-- Section Header Editorial -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end border-b border-color-line pb-8">
+<div class="lg:col-span-7 space-y-3">
+<span class="text-[11px] font-semibold uppercase tracking-[0.24em] text-color-muted flex items-center gap-2">
+<span class="w-6 h-[1px] bg-color-muted inline-block"></span>
+              Curadoria Imobiliária // Litoral Sul &amp; Baixada Santista
+            </span>
+<h2 class="text-3xl md:text-5xl font-bold uppercase tracking-tight text-color-ink leading-[1.05]">
+              Grandes Realizações &amp; Obras de Destaque
+            </h2>
+</div>
+<div class="lg:col-span-5">
+<p class="text-sm md:text-base text-color-muted leading-relaxed">
+              Obras corporativas sob medida para franquias consolidadas no Brasil e projetos residenciais nobres. Segurança técnica, pontualidade de entrega e localização privilegiada.
+            </p>
+</div>
+</div>
+<!-- Master Asymmetric Grid: Destaque Esquerda (Burger King Peruíbe) + 2x2 Mosaico Direita -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch" id="comercial">
+<!-- Left Master Card: Nova Obra Burger King Peruíbe (IMAGE_6) -->
+<div class="lg:col-span-7 relative group flex flex-col justify-between overflow-hidden bg-color-surface border border-color-line min-h-[580px] p-6 md:p-8">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-[1.02]" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAtluSB4IhcaVMvNPGkD6MLQxKniGTjne1utr41GVL_A9zhQ_EhHs7mx6wlTJm3YhmItUbdMvhez2CgvpMaojKqGduuH70W3QKMYf95DY6mlr-h_uFzKPFdeZ3KZRmxexxBQ3HqtIz_3Afb2ybIgL9xYF62oIGpS8x76lC6NvQKtwEfg5IjfJ78jGDcdhoMWlY8evkbBCMcXr_vtDAv_FlWMa4LiXkoaALFZ0IAu2X2mJ5zMKG-SRvHjGSP38ecPsqabGE&quot;); background-position: center 30%;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/95 via-surface-dark/45 to-transparent pointer-events-none"></div>
+<!-- Header Badge -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white text-color-ink text-[10px] font-bold uppercase tracking-[0.2em] shadow-sm">
+<span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+<span class="">Nova Obra Corporativa // Peruíbe</span>
+</div>
+<span class="text-[10px] uppercase tracking-[0.24em] text-white/80 bg-surface-dark/60 backdrop-blur-sm px-3 py-1 border border-white/10">
+                Built-To-Suit
+              </span>
+</div>
+<!-- Inset Specification Panel na Base -->
+<div class="relative z-10 bg-white/95 backdrop-blur-md p-6 border border-white/40 shadow-sm mt-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-1.5">
+<span class="text-[10px] uppercase tracking-[0.2em] font-semibold text-color-muted block">Expansão de Rede // Litoral SP</span>
+<h3 class="text-2xl font-bold uppercase tracking-tight text-color-ink">
+                    Em Breve: Burger King Peruíbe
+                  </h3>
+<p class="text-xs text-color-muted max-w-md">
+                    O Burger King está chegando para fazer história na cidade. Mais uma realização com a assinatura de engenharia e solidez Armindo Ramalho.
+                  </p>
+</div>
+<div class="flex items-center gap-4 border-t md:border-t-0 md:border-l border-color-line pt-3 md:pt-0 md:pl-5">
+<div>
+<span class="block text-xs uppercase font-bold text-color-ink">Status</span>
+<span class="text-[10px] uppercase tracking-wider text-color-muted">Em Implantação</span>
+</div>
+<a class="w-10 h-10 bg-color-ink text-white flex items-center justify-center hover:bg-black transition-colors" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20detalhes%20da%20nova%20obra%20do%20Burger%20King%20em%20Peruíbe." target="_blank">
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Grid 2x2 Mosaico Equilibrado -->
+<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
+<!-- Item 1: The Best Açaí (IMAGE_5) -->
+<div class="group relative overflow-hidden bg-color-surface border border-color-line aspect-square flex flex-col justify-end p-5">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDiiKLfAjkXx6aYXNBgBdwwWG0ZIk5OSGwQ4yjQjU0EYFDPx03iBdziaudhH0EOn2LNPNC9FSqs7PlTFmhqPKiXnHcxO_WCCxjKT4LDzTio5-7AOkv3MyNcHY-rgW1V-0ATyNMvyiWKRvP-BP7n4A3Hw_i4byDP8y4z5P6OM9lFNB77On-4Ho6i7lMwXYngtK12HpFBZ6OPK8tQtmOD-omy9L3ks3bGsB0Gq7wJN_rom_T0KrBpjujv0PuNXnHsZG3Tdow&quot;); background-position: center 25%;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/30 to-transparent"></div>
+<div class="relative z-10 space-y-1">
+<span class="text-[9px] uppercase tracking-[0.2em] text-white/70 font-semibold block">Grandes Marcas</span>
+<h4 class="text-base font-bold text-white uppercase tracking-tight">The Best Açaí</h4>
+<p class="text-[11px] text-white/70 line-clamp-1">Novos investimentos comerciais e infraestrutura moderna.</p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1 text-[9px] uppercase tracking-[0.18em] font-semibold text-white hover:underline" href="https://wa.me/5513997849288?text=Olá,%20quero%20saber%20sobre%20pontos%20comerciais%20e%20The%20Best%20Açaí." target="_blank">
+<span class="">Consultar Ponto</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 2: Residência Riviera de São Lourenço (IMAGE_4) -->
+<div class="group relative overflow-hidden bg-color-surface border border-color-line aspect-square flex flex-col justify-end p-5">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCrSq8fuhxF1A-B8YFlM_lUK4VLIPLBlZepWieV2mTdqT488wV4GnGqqscrmeDQlenLg6RIIH25kesI7MyiksAtcw_cuZ1CAb_-JoK6LMwNxBKq79PDRgcxarhgzp-M7DnQmp-Wbr2-dQ7tUHD5IhlYhCyM2mk6Pq99w5sVDwiHNvz_aZO6pNOY151hECslbDEo7n5STokRp5dwolWi4se7WF0mJH7b4KoAW3SQRPDp1k6WXtmaZjXoiE4VHJiIW14Zdc8&quot;); background-position: center 30%;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/30 to-transparent"></div>
+<div class="relative z-10 space-y-1">
+<span class="text-[9px] uppercase tracking-[0.2em] text-white/70 font-semibold block">À Venda // Alto Padrão</span>
+<h4 class="text-base font-bold text-white uppercase tracking-tight">Riviera de São Lourenço</h4>
+<p class="text-[11px] text-white/70 line-clamp-1">04 Suítes • Espaço Gourmet • Piscina Integrada.</p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1 text-[9px] uppercase tracking-[0.18em] font-semibold text-white hover:underline" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20casa%20na%20Riviera%20de%20São%20Lourenço." target="_blank">
+<span class="">Ver Detalhes</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Item 3: Burger King Itanhaém Case (IMAGE_9) -->
+<div class="group relative overflow-hidden bg-color-surface border border-color-line aspect-square flex flex-col justify-end p-5">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 ease-out group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCWh7Emx0BnwRUvlHES17Qub5RQSwlUmIaXdvqQ8OL8hdJaZDvccCIMc0plDmYAp04z6dv_2fetQgpKXxgaYoHsKcyT0WNvEKHE-VaEirYxc5POsQRa8l0FR4A68IbFaOaBHTcSt6ETJQggQ5exjKsTTlcTXIQgu2H-GFTKekArWyk4ynRPeL6x8qAWRGRDfGe4HOId8VpuhB_kCdmOJ_qkthuG7mvkZicTzJFKHTyH1NZbfycXY4rI_GhOz9Zfo3ZF5v0&quot;); background-position: center 30%;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/90 via-surface-dark/30 to-transparent"></div>
+<div class="relative z-10 space-y-1">
+<span class="text-[9px] uppercase tracking-[0.2em] text-white/70 font-semibold block">Case Concluído</span>
+<h4 class="text-base font-bold text-white uppercase tracking-tight">Burger King Itanhaém</h4>
+<p class="text-[11px] text-white/70 line-clamp-1">Engenharia civil, infraestrutura técnica e entrega ágil.</p>
+<div class="pt-2">
+<span class="text-[9px] uppercase tracking-[0.18em] font-semibold text-white/80">Operação Ativa</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Residencial & Comercial Litoral -->
+<div class="group relative overflow-hidden bg-surface-dark-card border border-color-line aspect-square flex flex-col justify-end p-5">
+<div class="relative z-10 space-y-2 text-color-paper">
+<span class="text-[9px] uppercase tracking-[0.2em] text-color-muted font-semibold block">Portfólio Litoral</span>
+<h4 class="text-base font-bold text-white uppercase tracking-tight">Ilhas do Sul &amp; Centro Cibratel</h4>
+<p class="text-[11px] text-white/70">Residenciais beira-mar e galerias para comércio e serviços.</p>
+<div class="pt-2">
+<a class="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-[0.2em] font-medium text-white border-b border-white pb-0.5" href="https://wa.me/5513997849288" target="_blank">
+<span class="">Falar no WhatsApp</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: INSTITUCIONAL — MANIFESTO DE SOLIDEZ (+25 ANOS) -->
+<section class="w-full bg-surface-dark text-color-paper py-24 lg:py-32" id="manifesto">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left Editorial Manifesto Column -->
+<div class="lg:col-span-7 space-y-8">
+<div class="flex items-center gap-3">
+<img alt="AR" class="h-8 w-auto invert opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMHCM-t-Pf-B2PTnHeYHGRN2-81qMkyj_ayqfWcQwVNlhrcP87w1fUPi-pJgBdk_O1EfxXCWDeFJjtJfdtjlah3jZIt6jFQr8WiHXI833EznyF9zHGeu2TuEF9E4w5mHJYKbpNAq7qkRm4VQJwZdSs2QbtzUzI9eBl27GFfGCxjjTBijqhEA2br_MBeCeGBAiWOoK1eYVHavtJ3qXHg4gop6PvNufof36o4DmvnNa2Ri6r2zGm31mG86pgGf5vKnHzfM">
+<span class="text-[11px] uppercase tracking-[0.26em] text-white/60 font-semibold">Manifesto Institucional</span>
+</div>
+<div class="space-y-4">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white leading-[1.08]">
+                Mais de 25 anos construindo marcos e patrimônio sólido no litoral paulista.
+              </h2>
+<p class="text-base md:text-lg text-white/80 font-light leading-relaxed">
+                Entregamos empreendimentos residenciais e comerciais que unem qualidade construtiva, localização estratégica e alto potencial de valorização.
+              </p>
+</div>
+<div class="p-6 bg-surface-dark-card border-l-2 border-white space-y-2">
+<p class="text-lg md:text-xl font-medium tracking-tight text-white italic">
+                “Invista com quem entende do mercado e constrói com responsabilidade.”
+              </p>
+<span class="text-[10px] uppercase tracking-[0.24em] text-white/60 font-semibold block">— Armindo Ramalho Empreendimentos</span>
+</div>
+<p class="text-sm text-white/70 leading-relaxed font-light">
+              Somos especialistas em construção, venda e locação de imóveis, oferecendo oportunidades seguras tanto para quem deseja morar quanto para quem busca rentabilidade com contratos consolidados e imóveis de padrão impecável.
+            </p>
+<!-- Metrics Matrix com Linhas Arquitetônicas -->
+<div class="grid grid-cols-3 gap-6 pt-6 border-t border-color-line-dark">
+<div>
+<span class="block text-3xl md:text-4xl font-bold text-white tracking-tight">+25</span>
+<span class="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-white/60 font-medium">Anos de Mercado</span>
+</div>
+<div>
+<span class="block text-3xl md:text-4xl font-bold text-white tracking-tight">100%</span>
+<span class="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-white/60 font-medium">Segurança Jurídica</span>
+</div>
+<div>
+<span class="block text-3xl md:text-4xl font-bold text-white tracking-tight">Litoral</span>
+<span class="text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-white/60 font-medium">São Paulo</span>
+</div>
+</div>
+</div>
+<!-- Right Architectural Visual Panel (IMAGE_4) -->
+<div class="lg:col-span-5 relative">
+<div class="relative overflow-hidden border border-color-line-dark aspect-[4/5] bg-surface-dark-card">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCrSq8fuhxF1A-B8YFlM_lUK4VLIPLBlZepWieV2mTdqT488wV4GnGqqscrmeDQlenLg6RIIH25kesI7MyiksAtcw_cuZ1CAb_-JoK6LMwNxBKq79PDRgcxarhgzp-M7DnQmp-Wbr2-dQ7tUHD5IhlYhCyM2mk6Pq99w5sVDwiHNvz_aZO6pNOY151hECslbDEo7n5STokRp5dwolWi4se7WF0mJH7b4KoAW3SQRPDp1k6WXtmaZjXoiE4VHJiIW14Zdc8&quot;); background-position: center 30%;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-4 bg-surface-dark/80 backdrop-blur-md border border-white/10 space-y-1">
+<span class="text-[9px] uppercase tracking-[0.22em] text-white/60 font-semibold block">Rigor &amp; Acabamento</span>
+<p class="text-xs uppercase tracking-wider text-white font-medium">Residências Exclusivas &amp; Infraestrutura Corporativa</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: PILARES DE ATUAÇÃO & ENGENHARIA -->
+<section class="w-full py-24 lg:py-32 bg-color-paper" id="pilares">
+<div class="max-w-7xl mx-auto px-6 md:px-12 space-y-14">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-color-line">
+<div class="space-y-2">
+<span class="text-[11px] font-semibold uppercase tracking-[0.24em] text-color-muted block">Áreas de Domínio Técnico</span>
+<h2 class="text-3xl md:text-4xl font-bold uppercase tracking-tight text-color-ink">
+              Pilares de Atuação
+            </h2>
+</div>
+<p class="text-sm text-color-muted max-w-md">
+            Soluções completas com experiência e credibilidade para investidores, redes empresariais e famílias que buscam viver ou rentabilizar no litoral.
+          </p>
+</div>
+<!-- Linhas Editoriais Refinadas -->
+<div class="divide-y divide-color-line border-b border-color-line">
+<!-- Pilar 01 -->
+<div class="py-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center group hover:bg-white/60 transition-colors px-4 -mx-4">
+<div class="md:col-span-2 text-2xl font-bold text-color-muted group-hover:text-color-ink transition-colors tracking-tight">
+              01 //
+            </div>
+<div class="md:col-span-4">
+<h3 class="text-xl font-bold uppercase tracking-tight text-color-ink">Construção Civil &amp; Engenharia</h3>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium">Obras Corporativas e Residenciais</span>
+</div>
+<div class="md:col-span-5">
+<p class="text-sm text-color-muted leading-relaxed">
+                Execução rigorosa com equipe qualificada para grandes redes multinacionais (Burger King, The Best Açaí) e residenciais de alto padrão, cumprindo prazos e especificações fiduciárias.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<a class="w-9 h-9 rounded-full border border-color-line flex items-center justify-center text-color-ink group-hover:bg-color-ink group-hover:text-white transition-all" href="https://wa.me/5513997849288?text=Olá,%20tenho%20interesse%20em%20Construção%20Civil%20e%20Engenharia.">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pilar 02 -->
+<div class="py-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center group hover:bg-white/60 transition-colors px-4 -mx-4">
+<div class="md:col-span-2 text-2xl font-bold text-color-muted group-hover:text-color-ink transition-colors tracking-tight">
+              02 //
+            </div>
+<div class="md:col-span-4">
+<h3 class="text-xl font-bold uppercase tracking-tight text-color-ink">Venda &amp; Aquisição Patrimonial</h3>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium">Imóveis com Potencial de Valorização</span>
+</div>
+<div class="md:col-span-5">
+<p class="text-sm text-color-muted leading-relaxed">
+                Curadoria precisa das melhores oportunidades imobiliárias do litoral. Transações transparentes, diligência documental total e acompanhamento consultivo de ponta a ponta.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<a class="w-9 h-9 rounded-full border border-color-line flex items-center justify-center text-color-ink group-hover:bg-color-ink group-hover:text-white transition-all" href="https://wa.me/5513997849288?text=Olá,%20quero%20conhecer%20as%20opções%20para%20aquisição%20patrimonial.">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pilar 03 -->
+<div class="py-10 grid grid-cols-1 md:grid-cols-12 gap-6 items-center group hover:bg-white/60 transition-colors px-4 -mx-4">
+<div class="md:col-span-2 text-2xl font-bold text-color-muted group-hover:text-color-ink transition-colors tracking-tight">
+              03 //
+            </div>
+<div class="md:col-span-4">
+<h3 class="text-xl font-bold uppercase tracking-tight text-color-ink">Locação Estratégica &amp; Built-to-Suit</h3>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium">Renda Recorrente e Solidez Contratual</span>
+</div>
+<div class="md:col-span-5">
+<p class="text-sm text-color-muted leading-relaxed">
+                Desenvolvimento de imóveis comerciais sob medida para marcas consolidadas e gestão de contratos de locação focados em retorno líquido estável e perenidade patrimonial.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<a class="w-9 h-9 rounded-full border border-color-line flex items-center justify-center text-color-ink group-hover:bg-color-ink group-hover:text-white transition-all" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20saber%20sobre%20locações%20e%20projetos%20built-to-suit.">
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: NOVO PANORAMA EM FOCO (EMPREENDIMENTOS & PORTFÓLIO) -->
+<section class="w-full py-20 bg-white border-y border-color-line">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<div class="lg:col-span-8 overflow-hidden bg-surface-dark min-h-[420px] relative group">
+<div class="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCWh7Emx0BnwRUvlHES17Qub5RQSwlUmIaXdvqQ8OL8hdJaZDvccCIMc0plDmYAp04z6dv_2fetQgpKXxgaYoHsKcyT0WNvEKHE-VaEirYxc5POsQRa8l0FR4A68IbFaOaBHTcSt6ETJQggQ5exjKsTTlcTXIQgu2H-GFTKekArWyk4ynRPeL6x8qAWRGRDfGe4HOId8VpuhB_kCdmOJ_qkthuG7mvkZicTzJFKHTyH1NZbfycXY4rI_GhOz9Zfo3ZF5v0&quot;); background-position: center 40%;"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark/95 via-surface-dark/30 to-transparent"></div>
+<div class="relative z-10 h-full p-8 flex flex-col justify-between text-white">
+<span class="px-3 py-1 bg-white/20 backdrop-blur-md text-[10px] uppercase tracking-[0.2em] font-semibold w-fit">
+                Padrão Construtivo Corporativo
+              </span>
+<div class="space-y-2 max-w-xl">
+<span class="text-xs uppercase tracking-[0.24em] text-white/70">Unidade Referência</span>
+<h3 class="text-2xl sm:text-3xl font-bold uppercase tracking-tight text-white">
+                  Fachadas Modernas, Estruturas de Vidro &amp; Concreto de Alto Desempenho
+                </h3>
+<p class="text-xs text-white/80 leading-relaxed font-light">
+                  Do planejamento de fundações ao acabamento estético final. Execuções completadas com máxima pontualidade para redes que exigem padrões internacionais de qualidade.
+                </p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 bg-color-paper p-8 flex flex-col justify-between border border-color-line space-y-6">
+<div class="space-y-4">
+<span class="text-[10px] uppercase tracking-[0.22em] text-color-muted font-bold block">Por Que Investir com a AR?</span>
+<h4 class="text-2xl font-bold uppercase tracking-tight text-color-ink leading-tight">
+                Engenharia que agrega valor ao solo litorâneo
+              </h4>
+<ul class="space-y-3 text-xs text-color-muted pt-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-color-ink text-sm">check_circle</span>
+<span class="">Pontualidade rigorosa no cronograma de obras.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-color-ink text-sm">check_circle</span>
+<span class="">Experiência comprovada com marcas globais e franquias.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-color-ink text-sm">check_circle</span>
+<span class="">Segurança jurídica transparente e assessoria completa.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-color-line">
+<a class="w-full inline-flex items-center justify-between px-5 py-3.5 bg-color-ink text-white text-[10px] uppercase tracking-[0.2em] font-semibold hover:bg-black transition-colors" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20apresentar%20uma%20demanda%20de%20construção%20ou%20investimento." target="_blank">
+<span class="">Apresentar Projeto</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: VITRINE & CATÁLOGO SELECIONADO -->
+<section class="w-full py-24 lg:py-32 bg-color-paper" id="vitrine">
+<div class="max-w-7xl mx-auto px-6 md:px-12 space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-color-line">
+<div class="space-y-2">
+<span class="text-[11px] font-semibold uppercase tracking-[0.24em] text-color-muted block">Acervo Selecionado</span>
+<h2 class="text-3xl md:text-4xl font-bold uppercase tracking-tight text-color-ink">
+              Oportunidades em Destaque
+            </h2>
+</div>
+<!-- Filtros Estilo Editorial -->
+<div class="inline-flex p-1 bg-white border border-color-line text-[10px] uppercase tracking-[0.18em] font-semibold" id="catalog-filters">
+<button class="px-4 py-2 bg-color-ink text-white transition-colors" data-filter="all">Todos</button>
+<button class="px-4 py-2 text-color-muted hover:text-color-ink transition-colors" data-filter="commercial">Corporativos</button>
+<button class="px-4 py-2 text-color-muted hover:text-color-ink transition-colors" data-filter="beach">Residenciais</button>
+<button class="px-4 py-2 text-color-muted hover:text-color-ink transition-colors" data-filter="rent">Locação</button>
+</div>
+</div>
+<!-- Cards com Fotografia Nobre e Tipografia Precisa -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Burger King Peruíbe (IMAGE_6) -->
+<a class="group bg-white border border-color-line overflow-hidden flex flex-col justify-between" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20informações%20sobre%20a%20obra%20do%20Burger%20King%20em%20Peruíbe." target="_blank">
+<div class="relative aspect-[4/3] bg-surface-dark overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAtluSB4IhcaVMvNPGkD6MLQxKniGTjne1utr41GVL_A9zhQ_EhHs7mx6wlTJm3YhmItUbdMvhez2CgvpMaojKqGduuH70W3QKMYf95DY6mlr-h_uFzKPFdeZ3KZRmxexxBQ3HqtIz_3Afb2ybIgL9xYF62oIGpS8x76lC6NvQKtwEfg5IjfJ78jGDcdhoMWlY8evkbBCMcXr_vtDAv_FlWMa4LiXkoaALFZ0IAu2X2mJ5zMKG-SRvHjGSP38ecPsqabGE&quot;); background-position: center 30%;"></div>
+<span class="absolute top-3 left-3 bg-color-ink text-white text-[9px] uppercase tracking-[0.2em] font-semibold px-2.5 py-1">
+                Peruíbe
+              </span>
+<span class="absolute bottom-3 right-3 bg-red-600 text-white text-[8px] uppercase tracking-[0.2em] font-bold px-2 py-0.5">
+                Novidade
+              </span>
+</div>
+<div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium block">Obra Corporativa</span>
+<h4 class="text-base font-bold uppercase tracking-tight text-color-ink group-hover:text-color-muted transition-colors">
+                  Novo Burger King Peruíbe
+                </h4>
+<p class="text-xs text-color-muted mt-1">Expansão de grande marca no litoral sul.</p>
+</div>
+<div class="pt-3 border-t border-color-line flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-color-ink font-semibold">
+<span class="">Built-to-Suit</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 2: The Best Açaí (IMAGE_5) -->
+<a class="group bg-white border border-color-line overflow-hidden flex flex-col justify-between" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20saber%20sobre%20o%20ponto%20The%20Best%20Açaí." target="_blank">
+<div class="relative aspect-[4/3] bg-surface-dark overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDiiKLfAjkXx6aYXNBgBdwwWG0ZIk5OSGwQ4yjQjU0EYFDPx03iBdziaudhH0EOn2LNPNC9FSqs7PlTFmhqPKiXnHcxO_WCCxjKT4LDzTio5-7AOkv3MyNcHY-rgW1V-0ATyNMvyiWKRvP-BP7n4A3Hw_i4byDP8y4z5P6OM9lFNB77On-4Ho6i7lMwXYngtK12HpFBZ6OPK8tQtmOD-omy9L3ks3bGsB0Gq7wJN_rom_T0KrBpjujv0PuNXnHsZG3Tdow&quot;); background-position: center 20%;"></div>
+<span class="absolute top-3 left-3 bg-color-ink text-white text-[9px] uppercase tracking-[0.2em] font-semibold px-2.5 py-1">
+                Litoral SP
+              </span>
+</div>
+<div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium block">Ponto Estratégico</span>
+<h4 class="text-base font-bold uppercase tracking-tight text-color-ink group-hover:text-color-muted transition-colors">
+                  The Best Açaí
+                </h4>
+<p class="text-xs text-color-muted mt-1">Localização nobre de alto fluxo de consumidores.</p>
+</div>
+<div class="pt-3 border-t border-color-line flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-color-ink font-semibold">
+<span class="">Comercial</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 3: Riviera de São Lourenço (IMAGE_4) -->
+<a class="group bg-white border border-color-line overflow-hidden flex flex-col justify-between" href="https://wa.me/5513997849288?text=Olá,%20tenho%20interesse%20no%20imóvel%20da%20Riviera%20de%20São%20Lourenço." target="_blank">
+<div class="relative aspect-[4/3] bg-surface-dark overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCrSq8fuhxF1A-B8YFlM_lUK4VLIPLBlZepWieV2mTdqT488wV4GnGqqscrmeDQlenLg6RIIH25kesI7MyiksAtcw_cuZ1CAb_-JoK6LMwNxBKq79PDRgcxarhgzp-M7DnQmp-Wbr2-dQ7tUHD5IhlYhCyM2mk6Pq99w5sVDwiHNvz_aZO6pNOY151hECslbDEo7n5STokRp5dwolWi4se7WF0mJH7b4KoAW3SQRPDp1k6WXtmaZjXoiE4VHJiIW14Zdc8&quot;); background-position: center 25%;"></div>
+<span class="absolute top-3 left-3 bg-color-ink text-white text-[9px] uppercase tracking-[0.2em] font-semibold px-2.5 py-1">
+                Riviera
+              </span>
+<span class="absolute bottom-3 right-3 bg-color-ink text-white text-[8px] uppercase tracking-[0.2em] font-semibold px-2 py-0.5">
+                À Venda
+              </span>
+</div>
+<div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium block">Mansão Exclusiva</span>
+<h4 class="text-base font-bold uppercase tracking-tight text-color-ink group-hover:text-color-muted transition-colors">
+                  Riviera Alto Padrão
+                </h4>
+<p class="text-xs text-color-muted mt-1">4 Suítes, arquitetura iluminada e lazer privativo.</p>
+</div>
+<div class="pt-3 border-t border-color-line flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-color-ink font-semibold">
+<span class="">Residencial</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+</a>
+<!-- Card 4: Burger King Itanhaém (IMAGE_9) -->
+<a class="group bg-white border border-color-line overflow-hidden flex flex-col justify-between" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20conversar%20sobre%20obras%20corporativas%20comerciais." target="_blank">
+<div class="relative aspect-[4/3] bg-surface-dark overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCWh7Emx0BnwRUvlHES17Qub5RQSwlUmIaXdvqQ8OL8hdJaZDvccCIMc0plDmYAp04z6dv_2fetQgpKXxgaYoHsKcyT0WNvEKHE-VaEirYxc5POsQRa8l0FR4A68IbFaOaBHTcSt6ETJQggQ5exjKsTTlcTXIQgu2H-GFTKekArWyk4ynRPeL6x8qAWRGRDfGe4HOId8VpuhB_kCdmOJ_qkthuG7mvkZicTzJFKHTyH1NZbfycXY4rI_GhOz9Zfo3ZF5v0&quot;); background-position: center 30%;"></div>
+<span class="absolute top-3 left-3 bg-color-ink text-white text-[9px] uppercase tracking-[0.2em] font-semibold px-2.5 py-1">
+                Itanhaém
+              </span>
+</div>
+<div class="p-5 space-y-2 flex-1 flex flex-col justify-between">
+<div>
+<span class="text-[10px] uppercase tracking-[0.2em] text-color-muted font-medium block">Case de Engenharia</span>
+<h4 class="text-base font-bold uppercase tracking-tight text-color-ink group-hover:text-color-muted transition-colors">
+                  Burger King Concluído
+                </h4>
+<p class="text-xs text-color-muted mt-1">Padrão construtivo e solidez operacional.</p>
+</div>
+<div class="pt-3 border-t border-color-line flex items-center justify-between text-[10px] uppercase tracking-[0.16em] text-color-ink font-semibold">
+<span class="">Engenharia AR</span>
+<span class="material-symbols-outlined text-sm">north_east</span>
+</div>
+</div>
+</a>
+</div>
+<!-- CTA Direto Catálogo Completo -->
+<div class="text-center pt-6">
+<a class="inline-flex items-center gap-3 px-8 py-4 bg-color-ink text-white text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-black transition-all" href="https://wa.me/5513997849288?text=Olá,%20gostaria%20de%20receber%20o%20catálogo%20completo%20de%20imóveis%20e%20obras%20Armindo%20Ramalho." target="_blank">
+<span class="material-symbols-outlined text-sm">chat</span>
+<span class="">Solicitar Catálogo Completo via WhatsApp</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SECTION 7: ATENDIMENTO FINAL & CONTATO DIRETO -->
+<section class="w-full py-24 lg:py-32 bg-surface-dark text-color-paper" id="contato">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="max-w-4xl space-y-12">
+<div class="space-y-4">
+<span class="text-[11px] font-semibold uppercase tracking-[0.26em] text-white/50 block">Atendimento &amp; Novos Negócios</span>
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold uppercase tracking-tight text-white leading-tight">
+              Transforme seu projeto em patrimônio sólido no litoral paulista.
+            </h2>
+<p class="text-base text-white/70 max-w-2xl leading-relaxed font-light">
+              Fale diretamente com nossa diretoria para compra, venda, locação ou engenharia built-to-suit personalizada para sua marca ou investimento.
+            </p>
+</div>
+<!-- Cards de Canais Diretos -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+<!-- Canal 1: WhatsApp -->
+<div class="p-6 bg-surface-dark-card border border-white/10 space-y-3">
+<span class="material-symbols-outlined text-white text-2xl">call</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-white/50 block font-semibold">WhatsApp &amp; Telefone</span>
+<a class="text-lg font-bold text-white hover:underline block" href="https://wa.me/5513997849288" target="_blank">
+                (13) 99784-9288
+              </a>
+<span class="text-xs text-white/40 block">Atendimento imediato</span>
+</div>
+<!-- Canal 2: E-mail -->
+<div class="p-6 bg-surface-dark-card border border-white/10 space-y-3">
+<span class="material-symbols-outlined text-white text-2xl">mail</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-white/50 block font-semibold">E-mail Corporativo</span>
+<a class="text-sm md:text-base font-bold text-white hover:underline block break-all" href="mailto:adm@armindoramalho.com.br">
+                adm@armindoramalho.com.br
+              </a>
+<span class="text-xs text-white/40 block">Administrativo &amp; Obras</span>
+</div>
+<!-- Canal 3: Instagram & Região -->
+<div class="p-6 bg-surface-dark-card border border-white/10 space-y-3">
+<span class="material-symbols-outlined text-white text-2xl">share</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-white/50 block font-semibold">Instagram Oficial</span>
+<a class="text-base font-bold text-white hover:underline block" href="https://instagram.com/aramalho.empreendimentos" target="_blank">
+                @aramalho.empreendimentos
+              </a>
+<span class="text-xs text-white/40 block">Litoral de São Paulo</span>
+</div>
+</div>
+<div class="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<a class="inline-flex items-center gap-3 px-8 py-4 bg-white text-color-ink text-[11px] font-semibold uppercase tracking-[0.2em] hover:bg-color-paper transition-all group" href="https://wa.me/5513997849288" target="_blank">
+<span class="">Iniciar Conversa no WhatsApp</span>
+<span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<span class="text-[11px] uppercase tracking-[0.2em] text-white/50">
+              Resposta ágil e consultoria técnica especializada
+            </span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER EDITORIAL COM ASSINATURA AR -->
+<footer class="w-full bg-color-paper text-color-ink border-t border-color-line">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-color-line">
+<!-- Brand Info -->
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center gap-3.5">
+<img alt="Armindo Ramalho Empreendimentos" class="h-10 w-auto object-contain filter grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMMHCM-t-Pf-B2PTnHeYHGRN2-81qMkyj_ayqfWcQwVNlhrcP87w1fUPi-pJgBdk_O1EfxXCWDeFJjtJfdtjlah3jZIt6jFQr8WiHXI833EznyF9zHGeu2TuEF9E4w5mHJYKbpNAq7qkRm4VQJwZdSs2QbtzUzI9eBl27GFfGCxjjTBijqhEA2br_MBeCeGBAiWOoK1eYVHavtJ3qXHg4gop6PvNufof36o4DmvnNa2Ri6r2zGm31mG86pgGf5vKnHzfM">
+<div class="flex flex-col">
+<span class="text-sm font-bold tracking-[0.2em] uppercase text-color-ink leading-tight">Armindo Ramalho</span>
+<span class="text-[10px] tracking-[0.28em] uppercase text-color-muted">Empreendimentos</span>
+</div>
+</div>
+<p class="text-xs text-color-muted leading-relaxed max-w-sm">
+            Há mais de 25 anos atuando na construção civil, compra, venda e locação de imóveis no litoral de São Paulo com compromisso ético, rigor construtivo e solidez comprovada.
+          </p>
+<div class="text-[10px] uppercase tracking-[0.2em] font-semibold text-color-muted">
+            Qualidade Construtiva &amp; Valorização Patrimonial
+          </div>
+</div>
+<!-- Links Rápidos -->
+<div class="lg:col-span-3 space-y-4">
+<h5 class="text-[11px] uppercase tracking-[0.24em] font-bold text-color-ink">Navegação</h5>
+<ul class="space-y-2.5 text-xs text-color-muted font-medium uppercase tracking-wider">
+<li class=""><a class="hover:text-color-ink transition-colors" href="#curadoria">Empreendimentos</a></li>
+<li class=""><a class="hover:text-color-ink transition-colors" href="#comercial">Obras Corporativas</a></li>
+<li class=""><a class="hover:text-color-ink transition-colors" href="#manifesto">Manifesto &amp; História</a></li>
+<li class=""><a class="hover:text-color-ink transition-colors" href="#pilares">Pilares de Engenharia</a></li>
+<li class=""><a class="hover:text-color-ink transition-colors" href="#vitrine">Acervo de Imóveis</a></li>
+</ul>
+</div>
+<!-- Dados de Contato e Localização -->
+<div class="lg:col-span-4 space-y-4">
+<h5 class="text-[11px] uppercase tracking-[0.24em] font-bold text-color-ink">Canais de Contato</h5>
+<div class="space-y-2 text-xs text-color-muted">
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-color-ink">call</span>
+<span class="">WhatsApp: <strong>(13) 99784-9288</strong></span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-color-ink">mail</span>
+<span class="">E-mail: <strong>adm@armindoramalho.com.br</strong></span>
+</p>
+<p class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-color-ink">location_on</span>
+<span class="">Atuação: <strong>Litoral de São Paulo</strong></span>
+</p>
+</div>
+<div class="pt-2">
+<a class="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold text-color-ink border-b border-color-ink pb-1 hover:opacity-75" href="https://wa.me/5513997849288" target="_blank">
+<span class="">Falar Diretamente Conosco</span>
+<span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Bottom Legal Strip -->
+<div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] uppercase tracking-[0.2em] text-color-muted">
+<div class="">
+          © <span id="current-year" class="">2026</span> Armindo Ramalho Empreendimentos. Todos os direitos reservados.
+        </div>
+<div class="flex items-center gap-6">
+<a class="hover:text-color-ink transition-colors" href="https://instagram.com/aramalho.empreendimentos" target="_blank">Instagram Oficial</a>
+<span class="">•</span>
+<span class="">Litoral de São Paulo</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Scripts Interativos & Dinâmica Editorial -->
+<script>
+    (function() {
+      // Dynamic Year
+      const yearEl = document.getElementById('current-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // Header Scroll Behavior
+      const header = document.getElementById('main-header');
+      const handleScroll = () => {
+        if (!header) return;
+        if (window.scrollY > 40) {
+          header.classList.remove('bg-color-ink/40', 'py-5');
+          header.classList.add('bg-surface-dark/95', 'py-3.5', 'border-white/10', 'shadow-md');
+        } else {
+          header.classList.remove('bg-surface-dark/95', 'py-3.5', 'shadow-md');
+          header.classList.add('bg-color-ink/40', 'py-5');
+        }
+      };
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileIcon = document.getElementById('mobile-menu-icon');
+
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.contains('hidden');
+          if (isOpen) {
+            mobileMenu.classList.remove('hidden');
+            mobileBtn.setAttribute('aria-expanded', 'true');
+            if (mobileIcon) mobileIcon.textContent = 'close';
+          } else {
+            mobileMenu.classList.add('hidden');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            if (mobileIcon) mobileIcon.textContent = 'menu';
+          }
+        });
+
+        // Close on click link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            if (mobileIcon) mobileIcon.textContent = 'menu';
+          });
+        });
+      }
+
+      // Catalog Filter Simple Tab Highlight
+      const filterButtons = document.querySelectorAll('#catalog-filters button');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-color-ink', 'text-white');
+            b.classList.add('text-color-muted');
+          });
+          btn.classList.add('bg-color-ink', 'text-white');
+          btn.classList.remove('text-color-muted');
+        });
+      });
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

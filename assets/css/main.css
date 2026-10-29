@@ -1,0 +1,174 @@
+/**
+ * ARMINDO RAMALHO EMPREENDIMENTOS
+ * Arquitetura & Engenharia de Alto Padrão
+ * Sistema de Design Tokens, Motion e Tipografia
+ */
+
+:root {
+  /* Paleta Mineral & Arquitetônica */
+  --bg-dark: #0a0b0d;
+  --bg-mineral: #121417;
+  --bg-card: #181b20;
+  --bg-paper: #f5f4ef;
+  --bg-surface: #ffffff;
+
+  /* Bordas e Linhas de Cota */
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-dark-subtle: rgba(255, 255, 255, 0.06);
+  --border-light: #e4e1d9;
+
+  /* Tipografia & Contrastes */
+  --text-dark: #0f1012;
+  --text-muted: #6b6962;
+  --text-light: #f5f4ef;
+  --text-light-muted: rgba(245, 244, 239, 0.65);
+  --accent-signal: #e02424;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utilitários Tipográficos */
+.font-display {
+  font-family: 'Syne', 'Space Grotesk', sans-serif;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Grids Técnicos de Prancheta */
+.architectural-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.architectural-grid-light {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+}
+
+/* Tipografia Monumental da Hero (ZROBIM/HESTIA Style) */
+.hero-watermark {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.1rem, 6.5vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.98);
+  user-select: none;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Movimento de Câmera da Hero (Lento e Cinematográfico) */
+@keyframes heroCameraMove {
+  0% {
+    transform: scale(1.04) translateY(0);
+  }
+  100% {
+    transform: scale(1.00) translateY(0);
+  }
+}
+
+.animate-hero-bg {
+  animation: heroCameraMove 12s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Revelação Progressiva Suave */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-1 {
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s backwards;
+}
+
+.reveal-2 {
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.35s backwards;
+}
+
+.reveal-3 {
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s backwards;
+}
+
+/* Acessibilidade: Prefers Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-hero-bg {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Linhas Arquitetônicas Auxiliares */
+.hairline-b {
+  border-bottom: 1px solid var(--border-dark);
+}
+.hairline-t {
+  border-top: 1px solid var(--border-dark);
+}
+.hairline-l {
+  border-left: 1px solid var(--border-dark);
+}
+.hairline-r {
+  border-right: 1px solid var(--border-dark);
+}
+
+/* Transições e Estados da Vitrine de Imóveis */
+.catalog-item {
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.catalog-item.hidden-item {
+  display: none !important;
+}
+
+/* Added hero overlay styling */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(0,0,0,0.55), rgba(0,0,0,0.35) 70%);
+  pointer-events: none;
+}
+
+/* Hero text entrance animation */
+@keyframes heroTextIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.hero-watermark {
+  animation: heroTextIn 1.2s ease-out forwards;
+}

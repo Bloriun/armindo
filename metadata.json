@@ -1,0 +1,8 @@
+{
+  "name": "Armindo Ramalho Empreendimentos",
+  "description": "Engenharia e arquitetura de alto padrão, obras corporativas built-to-suit e empreendimentos residenciais no litoral de São Paulo.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

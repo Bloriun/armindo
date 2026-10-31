@@ -23,26 +23,26 @@ export const Hero: React.FC = () => {
     () => {
       const mm = gsap.matchMedia();
 
-      // Configuração para usuários com preferência por movimento natural
+      // Configuração para usuários com preferência por animação completa
       mm.add(
         '(prefers-reduced-motion: no-preference)',
         () => {
           if (!heroRef.current) return;
 
-          // 1. Sequência Cinematográfica de Entrada (ao carregar o Hero)
+          // 1. Sequência Cinematográfica de Entrada
           const enterTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
           // Movimento lento e imersivo de lente na fotografia real
           if (bgImageRef.current) {
             enterTl.fromTo(
               bgImageRef.current,
-              { scale: 1.09, filter: 'blur(3px)' },
+              { scale: 1.08, filter: 'blur(2px)' },
               { scale: 1.01, filter: 'blur(0px)', duration: 2.2, ease: 'power2.out' },
               0
             );
           }
 
-          // Revelação da barra técnica superior
+          // Barra técnica superior
           if (topBarRef.current) {
             enterTl.fromTo(
               topBarRef.current,
@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
             );
           }
 
-          // Linha terracota de assinatura desenha-se da esquerda
+          // Linha terracota de assinatura
           if (oxideLineRef.current) {
             enterTl.fromTo(
               oxideLineRef.current,
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
             );
           }
 
-          // Título Monumental: revelação arquitetônica por máscara vertical
+          // Título Monumental
           if (titleLine1Ref.current) {
             enterTl.fromTo(
               titleLine1Ref.current,
@@ -91,37 +91,37 @@ export const Hero: React.FC = () => {
             );
           }
 
-          // Texto fiduciário e síntese institucional
+          // Texto institucional
           if (textBlockRef.current) {
             enterTl.fromTo(
               textBlockRef.current,
-              { y: 22, opacity: 0 },
+              { y: 20, opacity: 0 },
               { y: 0, opacity: 1, duration: 0.8 },
-              0.7
+              0.68
             );
           }
 
-          // Métricas de mercado
+          // Indicadores de mercado
           if (statsBlockRef.current) {
             enterTl.fromTo(
               statsBlockRef.current,
-              { y: 22, opacity: 0 },
+              { y: 20, opacity: 0 },
               { y: 0, opacity: 1, duration: 0.8 },
-              0.82
+              0.8
             );
           }
 
-          // Ações e botões de chamada
+          // Ações principais
           if (actionsRef.current) {
             enterTl.fromTo(
               actionsRef.current,
               { y: 16, opacity: 0 },
               { y: 0, opacity: 1, duration: 0.8 },
-              0.95
+              0.92
             );
           }
 
-          // 2. Interação Reativa com a Rolagem (Prepara a transição para o Corte Arquitetônico)
+          // 2. Transição reativa com o Scroll em direção ao Corte Arquitetônico
           const scrollTl = gsap.timeline({
             scrollTrigger: {
               trigger: heroRef.current,
@@ -132,16 +132,14 @@ export const Hero: React.FC = () => {
             },
           });
 
-          // Parallax sutil na fotografia real
           if (bgImageRef.current) {
             scrollTl.to(
               bgImageRef.current,
-              { yPercent: 14, scale: 1.04, ease: 'none' },
+              { yPercent: 12, scale: 1.04, ease: 'none' },
               0
             );
           }
 
-          // Tipografia e conteúdo recuam suavemente para cima com atenuação
           if (titleLine1Ref.current && titleLine2Ref.current && textBlockRef.current) {
             scrollTl.to(
               [titleLine1Ref.current, titleLine2Ref.current, textBlockRef.current, statsBlockRef.current],
@@ -150,7 +148,6 @@ export const Hero: React.FC = () => {
             );
           }
 
-          // Ações inferiores esvanecem suavemente limpando a visão para o corte
           if (actionsRef.current) {
             scrollTl.to(
               actionsRef.current,
@@ -176,25 +173,24 @@ export const Hero: React.FC = () => {
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none" aria-hidden="true">
         <div
           ref={bgImageRef}
-          className="w-full h-full bg-cover bg-center will-change-transform"
+          className="w-full h-full bg-cover bg-center will-change-transform scale-105"
           style={{
             backgroundImage: "url('/assets/images/bk-hero-sharp.png')",
-            backgroundPosition: 'center 40%',
+            backgroundPosition: 'center 38%',
           }}
         />
-        {/* Scrim ótico e grid arquitetônico suave */}
-        <div className="hero-scrim" />
-        <div className="absolute inset-0 architectural-grid pointer-events-none" />
+        {/* Scrim ótico medido para garantir legibilidade mantendo a nitidez da obra */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#171717] via-[#171717]/45 to-[#171717]/65" />
       </div>
 
       {/* Barra Técnica Superior com Dados Verificados */}
-      <div ref={topBarRef} className="relative z-10 max-w-[1520px] mx-auto w-full px-6 sm:px-10 lg:px-16">
+      <div ref={topBarRef} className="relative z-10 max-w-[1520px] mx-auto w-full px-5 sm:px-10 lg:px-16">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-white/15 pb-3.5 gap-2">
           <div className="flex items-center gap-3 sm:gap-6 text-[10px] sm:text-[11px] uppercase tracking-[0.24em] font-sans text-white/80">
             <span className="font-semibold text-white tracking-[0.24em]">
               EST. 1999 // 25+ ANOS
             </span>
-            <span className="hidden md:inline-block text-white/40">//</span>
+            <span className="hidden md:inline-block text-white/30">|</span>
             <span className="hidden md:inline-block text-white/70 tracking-[0.24em] font-sans">
               OBRA REAL EXECUTADA NO LITORAL PAULISTA
             </span>
@@ -207,20 +203,20 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Composição Tipográfica Monumental */}
-      <div className="relative z-10 max-w-[1520px] mx-auto w-full px-6 sm:px-10 lg:px-16 my-auto py-6 sm:py-8">
-        <div className="space-y-5">
-          <div ref={kickerRef} className="flex items-center gap-3 text-[10px] sm:text-xs font-sans uppercase tracking-[0.28em] text-white/80">
-            <span ref={oxideLineRef} className="w-8 sm:w-12 h-[1.5px] bg-[#B96545] inline-block will-change-transform" />
-            <span>ENGENHARIA E ARQUITETURA DE ALTO PADRÃO</span>
+      <div className="relative z-10 max-w-[1520px] mx-auto w-full px-5 sm:px-10 lg:px-16 my-auto py-6 sm:py-8">
+        <div className="space-y-6">
+          <div ref={kickerRef} className="flex items-center gap-2.5 sm:gap-3 text-[10px] sm:text-xs font-sans uppercase tracking-[0.2em] sm:tracking-[0.28em] text-white/80">
+            <span ref={oxideLineRef} className="w-6 sm:w-12 h-[1.5px] bg-[#B96545] inline-block shrink-0 will-change-transform" />
+            <span className="truncate sm:overflow-visible">ENGENHARIA E CONSTRUÇÃO NO LITORAL PAULISTA</span>
           </div>
 
-          <h1 className="hero-monumental m-0 text-white overflow-hidden flex flex-col">
-            <span className="overflow-hidden block py-1">
+          <h1 className="hero-monumental m-0 text-white flex flex-col max-w-full">
+            <span className="overflow-hidden block py-0.5 sm:py-1 max-w-full">
               <span ref={titleLine1Ref} className="block will-change-transform">
                 ARMINDO
               </span>
             </span>
-            <span className="overflow-hidden block py-1">
+            <span className="overflow-hidden block py-0.5 sm:py-1 max-w-full">
               <span ref={titleLine2Ref} className="block text-white/90 font-light italic font-heading will-change-transform">
                 RAMALHO
               </span>
@@ -257,16 +253,16 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Barra Inferior com Ações Principais e Conexão de Rolagem */}
-      <div ref={actionsRef} className="relative z-10 max-w-[1520px] mx-auto w-full px-6 sm:px-10 lg:px-16 will-change-transform">
+      <div ref={actionsRef} className="relative z-10 max-w-[1520px] mx-auto w-full px-5 sm:px-10 lg:px-16 will-change-transform">
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-5 border-t border-white/15">
           <div className="flex flex-wrap items-center gap-4">
             <a
               className="inline-flex items-center justify-center gap-3 px-8 py-3.5 bg-white text-[#171717] text-[11px] font-bold uppercase tracking-[0.22em] font-sans hover:bg-[#F0EEE7] transition-colors duration-300 shadow-xl group"
-              href={getWhatsAppLink('Olá, gostaria de conversar sobre oportunidades e investimentos com a Armindo Ramalho.')}
+              href={getWhatsAppLink('Olá, vim pelo site e gostaria de falar com a equipe da Armindo Ramalho.')}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Consultoria WhatsApp</span>
+              <span>Fale com a equipe</span>
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
             </a>
 
@@ -274,7 +270,7 @@ export const Hero: React.FC = () => {
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-white/30 bg-[#171717]/60 backdrop-blur-md text-white text-[11px] font-sans uppercase tracking-[0.22em] hover:bg-white/10 transition-colors"
               href="#corte-arquitetonico"
             >
-              <span>Ver Realizações</span>
+              <span>Conheça nossas obras</span>
               <ArrowDown className="w-4 h-4 animate-bounce" />
             </a>
           </div>

@@ -26,6 +26,8 @@ html {
   scroll-behavior: smooth;
   background-color: #171717;
   color: #F0EEE7;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
@@ -37,17 +39,28 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* Tipografia de Assinatura Monumental */
 .hero-monumental {
   font-family: 'Syne', 'Space Grotesk', sans-serif;
-  font-size: clamp(2.75rem, 7.5vw, 7.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 8.5vw, 7.5rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
   font-weight: 800;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+@media (min-width: 640px) {
+  .hero-monumental {
+    font-size: clamp(2.75rem, 7.5vw, 7.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+  }
 }
 
 /* Hairline Grid Arquitetônico Sóbrio */

@@ -1,0 +1,914 @@
+# ARMINDO RAMALHO EMPREENDIMENTOS
+# MASTER REDESIGN — ATLAS LITORÂNEO
+## Editorial Cinematic / Complete Experience Refinement
+
+**MODO: BUILD — IMPLEMENTAÇÃO DIRETA**
+
+Você está trabalhando em uma aplicação existente. Sua responsabilidade é executar uma reformulação substancial da experiência, não produzir outro planejamento ou um relatório dizendo que faria mudanças.
+
+O resultado deve representar uma evolução perceptível em relação à versão atual.
+
+---
+
+# 0. INSTRUÇÃO MAIS IMPORTANTE
+
+O histórico deste projeto apresenta várias tentativas em que foram descritas grandes melhorias, mas o código e a interface mudaram muito pouco.
+
+Desta vez, isso não será aceito.
+
+Você precisa:
+
+- Alterar a implementação real.
+- Melhorar a composição de todas as seções.
+- Corrigir a navbar de maneira estrutural.
+- Reorganizar o conteúdo e a hierarquia da página.
+- Aperfeiçoar o comportamento responsivo.
+- Desenvolver os conteúdos institucionais que estão faltando.
+- Implementar e testar as interações.
+- Abrir a versão executada no navegador.
+- Comparar capturas antes e depois.
+- Corrigir problemas visuais encontrados.
+
+**Não encerre após a auditoria. Não entregue somente sugestões. Não faça apenas alterações cosméticas de CSS. Implemente as mudanças.**
+
+Não peça nova aprovação para decisões de design menores. Tome decisões coerentes com esta especificação.
+
+# 1. PROJETO E STACK
+
+Repositório:
+https://github.com/Bloriun/armindo
+
+Stack existente:
+- React 18
+- TypeScript
+- Vite 6
+- Tailwind CSS 4
+- GSAP 3
+- @gsap/react
+- Lucide React
+
+Preserve a arquitetura e as dependências existentes.
+
+O App.tsx já organiza:
+- Navbar
+- Hero
+- ArchitecturalCut
+- Curadoria
+- Manifesto
+- Pilares
+- Panorama
+- Vitrine
+- Contato
+- Footer
+- ProjectDetailModal
+
+Os dados dos empreendimentos e contatos estão centralizados em portfolioData.ts.
+
+Aproveite os componentes e funcionalidades existentes. Não crie uma aplicação paralela e não troque o framework.
+
+# 2. DIREÇÃO E POSICIONAMENTO
+
+Conceito: ATLAS LITORÂNEO.
+
+Direção:
+- Arquitetura editorial.
+- Fotografia documental.
+- Cinematografia institucional.
+- Engenharia e construção.
+- Composição sofisticada.
+- Alternância de áreas claras e escuras.
+- Impacto visual forte.
+- Navegação natural.
+- Acabamento profissional.
+
+A empresa deve ser percebida principalmente como uma empresa de engenharia, construção e empreendimentos no litoral paulista.
+
+### Prioridade de público
+
+1. Empresas, redes e franquias.
+2. Clientes que precisam contratar projetos e obras.
+3. Investidores e parceiros patrimoniais.
+
+Venda e locação imobiliária são conteúdos secundários.
+
+### Objetivo comercial
+
+A conversão principal é contato institucional com a equipe.
+
+O visitante deve compreender:
+- Quem é a empresa.
+- O que ela faz.
+- Que tipo de projeto realiza.
+- Quais obras já realizou.
+- Como trabalha.
+- Como entrar em contato para desenvolver um projeto.
+
+# 3. AGENTES E SKILLS — OBRIGATÓRIO
+
+Antes de executar, descubra quais agentes e skills estão realmente disponíveis no ambiente atual.
+
+Não invente agentes, arquivos, comandos ou capacidades.
+
+## Skills do repositório
+
+Leia integralmente:
+
+- skills/design-taste-frontend/SKILL.md
+- skills/web-quality-audit/SKILL.md
+
+Leia também as referências relevantes da primeira skill:
+- references/copy.md
+- references/type.md
+- references/colour.md
+- references/layout.md
+- references/imagery.md
+- references/scenes.md
+- references/critique.md
+- references/motion.md
+
+### design-taste-frontend
+
+Esta skill deve orientar o desenvolvimento visual inteiro.
+
+Execute o processo real descrito nela:
+
+1. Inventário do negócio e de seus materiais exclusivos.
+2. Definição das afirmações que cada seção precisa comunicar.
+3. Geração de três direções visuais com draw.mjs.
+4. Comparação e escolha fundamentada da melhor direção.
+5. Desenvolvimento das composições de cada seção.
+6. Implementação das cenas de rolagem.
+7. Inspeção real no navegador.
+8. Crítica das capturas.
+9. Correção dos principais problemas.
+10. Nova inspeção até eliminar as falhas.
+
+Consulte os comandos disponíveis no próprio script antes de utilizá-los.
+
+Se o ambiente suportar os requisitos da skill, utilize seus scripts:
+- draw.mjs
+- assets.mjs
+- lint.mjs
+- inspect.mjs
+- scenes.mjs
+
+Não substitua a execução dessas ferramentas por uma descrição dizendo que foram utilizadas.
+
+### web-quality-audit
+
+Utilize para validar:
+- Performance.
+- Acessibilidade.
+- SEO.
+- Semântica.
+- Boas práticas.
+- Navegação e interações.
+- Comportamento real em navegador.
+
+Execute as verificações disponíveis e corrija os problemas de maior impacto.
+
+## Agentes
+
+Procure e utilize os agentes disponíveis no ambiente. Os agentes esperados no contexto anterior do projeto são:
+
+**research**
+- Inspecionar estrutura e dados.
+- Pesquisar o Instagram oficial.
+- Fazer inventário das imagens.
+- Avaliar resolução e qualidade.
+- Identificar material visual que ainda não está incorporado ao site.
+- Trabalhar sem modificar o código principal.
+
+**self**
+- Fazer revisão crítica independente.
+- Avaliar capturas antes e depois.
+- Identificar composição fraca, seções vazias, inconsistências e AI Slop.
+- Fazer revisão de qualidade das implementações.
+
+**image-generator**
+- Utilizar somente quando houver necessidade comprovada de recursos gráficos complementares.
+- Não gerar fotografias que representem obras reais.
+- Não substituir fotos documentais por imagens artificiais.
+- Não redesenhar a marca oficial.
+
+Se a plataforma não disponibilizar algum agente, registre isso e continue com as capacidades existentes.
+
+Não alegue utilização de agentes ou skills que não foram efetivamente executados.
+
+---
+
+# 4. AUDITORIA ANTES DAS ALTERAÇÕES
+
+Faça o levantamento e em seguida implemente.
+
+Execute:
+
+- git status
+- git diff
+- git diff --staged
+- Inspeção do App.tsx.
+- Inspeção dos componentes de todas as seções.
+- Inspeção de portfolioData.ts e types.
+- Inspeção dos estilos globais e tokens.
+- Inventário de public/assets/images e assets.
+- Verificação das imagens da logo.
+- Verificação do menu e dos links.
+- Verificação das animações GSAP.
+- Verificação do modal.
+- Verificação dos contatos e do WhatsApp.
+
+Registre as capturas da versão inicial.
+
+Não apague trabalho local existente.
+
+A auditoria deve identificar o que funciona, o que está visualmente fraco e o que está incompleto.
+
+# 5. SISTEMA RESPONSIVO — PRIORIDADE MÁXIMA
+
+Uma das reclamações centrais é a proporção das seções.
+
+O site não pode apresentar seções gigantes, conteúdo comprimido, espaços vazios ou elementos que fiquem fora da tela sem necessidade.
+
+**A composição deve reagir ao espaço disponível, não obrigar o visitante a se adaptar a dimensões arbitrárias.**
+
+Considere:
+- Resolução.
+- Largura.
+- Altura.
+- Proporção da tela.
+- Viewport disponível.
+- Zoom do navegador.
+- Densidade de conteúdo.
+- Orientação do dispositivo.
+
+### Regras de implementação
+
+Utilize:
+- CSS clamp().
+- Grid e Flexbox responsivos.
+- Container queries quando justificadas.
+- Aspect ratios específicos.
+- Unidades fluidas.
+- svh/dvh com fallback adequado.
+- Breakpoints por largura e, quando necessário, altura.
+
+Crie regras específicas para notebooks de altura reduzida.
+
+Por exemplo, em telas desktop com altura inferior a 780px, reduza o espaçamento vertical e reorganize imagens e conteúdos para manter a composição equilibrada.
+
+Não use JavaScript para tentar detectar o zoom do navegador. O viewport em CSS pixels já muda com o zoom e o layout deve responder naturalmente.
+
+### Comportamento desejado
+
+- Monitor grande: composições mais amplas, sem esticar elementos desnecessariamente.
+- Notebook: aproveitar a área disponível, reduzir desperdício vertical.
+- Tablet: reorganizar colunas e áreas de imagem.
+- Celular: composições próprias, sem apenas diminuir tudo.
+- Zoom de 125%, 150% e 200%: reflow adequado, sem corte de conteúdo.
+
+### Alturas das seções
+
+O Hero e os projetos de destaque podem se aproximar de uma tela inteira.
+
+As demais seções devem ter altura proporcional à quantidade de conteúdo.
+
+Não aplique 100vh em todas as seções.
+
+Não esconda conteúdo para fazer a seção caber.
+
+Não crie rolagem interna desnecessária.
+
+Não force scroll-snap.
+
+Quando o conteúdo não couber em uma tela, a seção poderá crescer naturalmente.
+
+O objetivo é uma composição que ocupe bem a tela, não um limite artificial de altura.
+
+# 6. NAVBAR — REFORMULAÇÃO COMPLETA
+
+A navbar atual está visualmente desproporcional, com links extensos, excesso de espaçamento tipográfico, elementos concorrentes e adaptação insuficiente.
+
+Não tente corrigir isso apenas reduzindo fonte e padding.
+
+Refaça sua composição.
+
+### Direção: editorial
+
+Estrutura desejada:
+
+**Esquerda:** logotipo oficial da Armindo Ramalho.
+
+**Centro:** navegação essencial.
+
+**Direita:** contato institucional com uma ação principal clara.
+
+Simplifique os links para:
+
+- Início
+- Obras
+- Empresa
+- Atuação
+- Contato
+
+O Acervo pode ser acessado pela seção de oportunidades ou por um submenu, caso seja mais claro.
+
+### Aparência
+
+- Header alinhado ao grid geral da página.
+- Margens fluidas.
+- Altura compacta.
+- Logo com escala correta.
+- Links com legibilidade.
+- Hierarquia clara.
+- Alinhamento vertical perfeito.
+- Estados hover e focus elegantes.
+- Transição ao scroll sem saltos.
+
+Utilize um estado visual adequado sobre o Hero e outro depois da rolagem.
+
+A transparência pode ser aplicada discretamente para leitura sobre a fotografia, mas não transforme a navbar em uma cápsula gigante de glassmorphism.
+
+A escolha atual é EDITORIAL, e não a navegação flutuante em formato de pílula.
+
+### Comportamento funcional
+
+- Links devem levar às âncoras corretas.
+- Menu mobile deve abrir e fechar corretamente.
+- Escape fecha o menu.
+- Selecionar uma opção fecha o menu.
+- Foco acessível.
+- Sem sobreposição com o Hero.
+- Sem transbordamento em 320px.
+- Header não pode ocupar uma proporção exagerada da tela.
+
+Valide principalmente em 1024px, 1280px e 1366px, pois a navbar precisa funcionar em notebooks, e não apenas em monitores grandes.
+
+# 7. LOGO OFICIAL
+
+Inspecione todas as versões da logo existentes.
+
+Escolha a versão mais fiel, com melhor qualidade e proporção.
+
+Não aplique invert ou grayscale automaticamente.
+
+Não substitua uma versão colorida por uma versão improvisada.
+
+Não use o texto ARMINDO RAMALHO repetido junto à marca quando isso causar redundância.
+
+# 8. HERO — POSICIONAMENTO DA EMPRESA
+
+Imagem principal:
+bk-hero-sharp.png, caso a auditoria confirme que é a melhor fotografia disponível.
+
+O Hero precisa comunicar:
+
+**Armindo Ramalho — Engenharia e Construção no Litoral Paulista.**
+
+Abertura:
+- Fotografia em grande escala.
+- Título bem hierarquizado.
+- Mensagem institucional direta.
+- Uma ação principal: Fale com a equipe.
+- Uma ação secundária: Conheça nossas obras.
+
+Não adicione métricas decorativas ou alegações não comprovadas.
+
+### Composição
+
+A fotografia deve ter presença real.
+
+Ajuste o ponto focal individualmente por tela.
+
+Não escureça toda a imagem para colocar um texto enorme por cima.
+
+Não preencha a tela com coordenadas, microtextos ou linhas técnicas sem função.
+
+### Animação
+
+Aprimore a timeline existente em Hero.tsx.
+
+Crie uma sequência expressiva:
+- Entrada da fotografia.
+- Revelação tipográfica.
+- Entrada da mensagem.
+- Aparição dos controles.
+- Parallax perceptível durante o início da rolagem.
+
+Separe as camadas para não haver conflitos entre entrada, zoom e parallax.
+
+O Hero precisa ser impactante antes da rolagem e continuar coerente enquanto o visitante começa a navegar.
+
+---
+
+# 9. SEGUNDA SEÇÃO — BURGER KING PERUÍBE
+
+Use a imagem promocional enviada pelo usuário como material principal desta seção.
+
+O arquivo anexado precisa ser incorporado ao projeto em:
+
+public/assets/images/bk-peruibe-campanha.jpg
+
+Se o arquivo não estiver disponível no ambiente do projeto, solicite que seja anexado novamente. Não substitua por outra imagem.
+
+A imagem contém:
+- Fotografia aérea do litoral de Peruíbe.
+- Chamada "Grande novidade / Em breve".
+- Logotipo Burger King.
+- Logotipo Armindo Ramalho.
+- Mensagem sobre a chegada da marca.
+- Telefone de contato.
+
+**Ela já é uma peça gráfica completa.**
+
+Portanto:
+
+- Não coloque outro título sobre a chamada original.
+- Não duplique o logotipo.
+- Não sobreponha textos à área central.
+- Não corte o telefone.
+- Não esconda os logotipos.
+- Não transforme o anúncio em fotografia de uma obra já concluída.
+
+Trate a peça como uma imagem promocional inteira.
+
+Utilize uma tag img com proporção preservada e um enquadramento que mantenha toda a arte visível.
+
+Se houver espaços laterais ou superiores em proporções diferentes, utilize uma superfície basalto coerente.
+
+A imagem deve ocupar uma parte visual dominante da seção.
+
+As informações adicionais devem ficar em uma área própria, curta e bem organizada:
+- Burger King Peruíbe.
+- Localização: Peruíbe, SP.
+- Natureza: novo empreendimento corporativo.
+- Mensagem comercial e contato.
+
+Não repetir o texto que já existe dentro da arte.
+
+### Animação
+
+A transição do Hero para a peça deve ser cinematográfica:
+- Revelação de imagem.
+- Mudança de escala.
+- Movimento de enquadramento.
+- Continuidade entre seções.
+- Entrada dos elementos de apoio no momento correto.
+
+Revisar o pin atual para que o visitante não sinta que a página está travada.
+
+No celular, preservar a arte inteira e utilizar rolagem nativa.
+
+# 10. TERCEIRA SEÇÃO — OBRAS E EMPREENDIMENTOS
+
+Transforme Curadoria.tsx em um carrossel editorial.
+
+Não use uma grade de cards repetidos.
+
+### Composição
+
+- Grande fotografia da obra ativa.
+- Próximo projeto parcialmente visível.
+- Nome da obra.
+- Cidade/localização.
+- Categoria.
+- Uma descrição curta.
+- Acesso à ficha compacta.
+
+Utilize os projetos reais existentes:
+- Burger King Itanhaém.
+- The Best Açaí.
+- Riviera de São Lourenço.
+- Ilhas do Sul.
+- Centro Cibratel.
+
+Não repita Burger King Peruíbe, que já possui seção própria.
+
+### Comportamento
+
+- Sem autoplay.
+- Navegação por setas.
+- Arrastar/deslizar por toque.
+- Indicador de posição.
+- Operação por teclado.
+- aria-labels.
+- Compatibilidade com rolagem vertical.
+
+Priorize scroll horizontal nativo com scroll-snap e controle de navegação, caso atenda ao design.
+
+### Imagens individuais
+
+Organize portfolioData.ts para permitir configuração específica de enquadramento por projeto.
+
+Campos possíveis:
+- imagePosition.
+- aspectRatio.
+- alt.
+- focalPoint.
+
+Não centralize automaticamente todas as imagens.
+
+Não corte fachadas, letreiros ou áreas relevantes.
+
+Preserve onSelectProject e a integração com ProjectDetailModal.
+
+# 11. A EMPRESA — HISTÓRIA E TRAJETÓRIA
+
+Desenvolva uma apresentação institucional completa.
+
+A seção precisa responder:
+- Quem é a Armindo Ramalho?
+- Qual é sua trajetória?
+- Qual é sua atuação regional?
+- Qual é sua experiência?
+- Em que tipo de empreendimento trabalha?
+
+Use o histórico real disponível.
+
+O resultado não pode ser uma parede de texto nem uma frase de impacto vazia.
+
+Trabalhe com:
+- Uma mensagem institucional principal.
+- Texto de apoio objetivo.
+- Fotografia relacionada à empresa.
+- Marcos históricos somente quando houver datas e fatos confirmados.
+
+Se não existirem informações suficientes para criar uma linha do tempo, faça uma apresentação editorial sem inventar acontecimentos.
+
+Não utilizar métricas falsas ou estatísticas de mercado sem fonte.
+
+# 12. PROCESSO E BASTIDORES
+
+O usuário deseja os dois:
+- Processo de trabalho.
+- Galeria de bastidores.
+
+Crie uma composição visual que mostre como uma obra evolui.
+
+Use etapas coerentes, como:
+- Planejamento.
+- Desenvolvimento.
+- Execução.
+- Entrega.
+
+Confirme o significado e a adequação dessas etapas ao processo real da empresa.
+
+Não atribua à empresa serviços de arquitetura, gestão, fiscalização ou engenharia especializada que não estejam comprovados.
+
+### Bastidores
+
+Pesquise fotografias reais da empresa e de suas obras.
+
+Fontes prioritárias:
+1. Materiais existentes no projeto.
+2. Instagram oficial @aramalho.empreendimentos.
+3. Novos materiais fornecidos pelo usuário.
+4. Imagens externas licenciadas para uso comercial e claramente contextuais.
+
+A galeria deve mostrar:
+- Diferentes ângulos.
+- Detalhes de construção.
+- Fachadas.
+- Materiais.
+- Evolução da obra.
+- Contexto regional.
+
+Não utilize fotografias genéricas de banco de imagens como se fossem obras da empresa.
+
+Se utilizar fotografias externas de arquitetura ou litoral apenas para ambientação, identifique sua origem e não as apresente como trabalhos realizados.
+
+Se o Instagram bloquear o acesso, não invente publicações e não diga que analisou o perfil. Registre a limitação e preserve o link oficial.
+
+A seção pode conter um CTA discreto:
+"Acompanhe nossos projetos e bastidores no Instagram".
+
+# 13. ÁREAS DE ATUAÇÃO
+
+Reorganize a seção Pilares.
+
+A prioridade deve ser:
+
+**Engenharia e construção corporativa**
+Obras comerciais, empreendimentos e projetos para marcas e empresas, conforme o histórico real.
+
+**Construção e empreendimentos**
+Apresentação da capacidade de desenvolver projetos no litoral paulista, respeitando os serviços realmente oferecidos.
+
+**Investimentos e parcerias**
+Conteúdo para investidores, proprietários e parceiros patrimoniais.
+
+Venda e locação devem ficar como serviços complementares.
+
+Não usar três cards idênticos com ícones.
+
+Utilize organização editorial, texto direto, fotografias e uma hierarquia clara.
+
+# 14. CREDIBILIDADE
+
+O usuário deseja valorizar:
+- História.
+- Obras.
+- Processo.
+- Depoimentos.
+- Certificações.
+
+Construa essa parte de maneira documental.
+
+Depoimentos:
+- Utilizar somente depoimentos reais.
+- Não inventar nomes, cargos, empresas ou falas.
+
+Certificações:
+- Exibir somente documentos e qualificações existentes.
+- Não criar selos gráficos com nomes fictícios.
+- Não afirmar conformidade jurídica ou técnica sem comprovação.
+
+Caso não existam materiais suficientes, priorize os projetos reais, a história e os registros da execução.
+
+Não renderize placeholders vazios ou seções com aparência inacabada.
+
+# 15. ACERVO IMOBILIÁRIO
+
+Preserve Vitrine.tsx e todos os filtros existentes.
+
+O acervo é secundário na narrativa principal.
+
+Mantenha:
+- Todos.
+- Corporativos.
+- Residenciais.
+- Locação.
+
+A apresentação deve ser compacta e funcional.
+
+Preserve:
+- Dados.
+- Categorias.
+- Status.
+- Links.
+- Fichas.
+- WhatsApp contextual.
+
+Não transforme cada item em um card visualmente idêntico.
+
+A ficha técnica solicitada deve ser compacta, sem informações técnicas fictícias.
+
+# 16. CONTATO E CONVERSÃO
+
+A chamada principal será institucional:
+
+**Fale com a equipe da Armindo Ramalho.**
+
+Objetivo:
+- Novos projetos.
+- Obras corporativas.
+- Construção.
+- Parcerias.
+- Investimentos.
+
+Preserve:
+- Número atual de WhatsApp.
+- E-mail.
+- Instagram.
+- getWhatsAppLink.
+- Mensagens contextualizadas.
+
+Aperfeiçoe o botão flutuante:
+- Ícone reconhecível do WhatsApp.
+- Texto "Fale com a equipe" no desktop.
+- Versão compacta no celular.
+- Sem pulso constante.
+- Posicionamento que não cubra conteúdo.
+
+Não crie um novo número nem altere os dados de contato sem autorização.
+
+# 17. FOOTER
+
+Refaça o rodapé com acabamento institucional.
+
+Deve conter:
+- Logo oficial.
+- Nome da empresa.
+- Descrição concisa da atuação.
+- Navegação.
+- Contatos.
+- Instagram.
+- Localização regional, se confirmada.
+- Direitos e ano atual.
+
+Não encher o rodapé de metadados, coordenadas ou frases decorativas.
+
+# 18. IDENTIDADE VISUAL E ANTI-AI SLOP
+
+Preserve a paleta:
+- Basalto #171717.
+- Papel Mineral #F0EEE7.
+- Concreto #AAA8A2.
+- Óxido #B96545.
+- Branco #FFFFFF.
+
+Preserve as famílias tipográficas que já fazem parte da identidade, racionalizando sua aplicação sem adicionar novas fontes desnecessárias.
+
+Utilize:
+- Composições assimétricas.
+- Fotografias grandes.
+- Escala tipográfica expressiva.
+- Alternância de fundos.
+- Ritmo editorial.
+- Espaços negativos controlados.
+- Transições de cena com propósito.
+
+Evite:
+- Cards repetidos.
+- Pílulas decorativas.
+- Gradientes aleatórios.
+- Glassmorphism por toda a página.
+- Ícones em caixas coloridas.
+- Coordenadas fictícias.
+- Microtextos sem significado.
+- Numeração 01/02/03 apenas decorativa.
+- Linhas finas e grids artificiais em excesso.
+- Sombras artificiais.
+- Efeitos de neon.
+- Seções com aparência de template.
+- Animações repetitivas em todos os componentes.
+
+**Não confunda remover decoração com deixar a página vazia.**
+
+Cada tela precisa ter uma composição completa, uma hierarquia clara e informação suficiente.
+
+# 19. ANIMAÇÕES CINEMATOGRÁFICAS
+
+Utilize a implementação atual de GSAP como base.
+
+Não replique animações já existentes.
+
+Desenvolva uma linguagem de movimento consistente:
+
+- Hero: entrada expressiva e parallax.
+- Burger King Peruíbe: transição de moldura e revelação.
+- Carrossel: navegação horizontal suave.
+- História: transição editorial.
+- Processo: evolução visual das etapas.
+- Bastidores: movimento pontual nas fotografias.
+- Seções finais: entradas curtas e discretas.
+
+Use transformação e opacidade quando adequadas.
+
+Respeite prefers-reduced-motion.
+
+No mobile:
+- Desative pins longos.
+- Preserve a rolagem natural.
+- Reduza parallax.
+- Evite efeitos que atrasem a interação.
+
+Realize limpeza correta de timelines, ScrollTriggers e event listeners.
+
+# 20. PROVA DE IMPLEMENTAÇÃO — NÃO ACEITAR ALTERAÇÕES SUPERFICIAIS
+
+Para evitar outra execução em que o agente somente descreva melhorias:
+
+Antes de editar, registre os arquivos e capturas existentes.
+
+Durante a implementação, altere de verdade os componentes responsáveis por cada problema.
+
+Arquivos prioritários para inspeção e aperfeiçoamento:
+- src/App.tsx
+- src/components/layout/Navbar.tsx
+- src/components/sections/Hero.tsx
+- src/components/sections/ArchitecturalCut.tsx
+- src/components/sections/Curadoria.tsx
+- src/components/sections/Manifesto.tsx
+- src/components/sections/Pilares.tsx
+- src/components/sections/Panorama.tsx
+- src/components/sections/Vitrine.tsx
+- src/components/sections/Contato.tsx
+- src/components/layout/Footer.tsx
+- src/components/ui/ProjectDetailModal.tsx
+- src/data/portfolioData.ts
+- src/types/index.ts
+- folha de estilos global existente.
+
+Se uma implementação já estiver adequada, preserve-a. Mas nenhuma seção pode ser considerada aprovada somente por estar compilando.
+
+Faça mudanças estruturais de layout e composição onde os problemas forem identificados.
+
+Não entregue somente:
+- Alterações de cores.
+- Pequenas mudanças de padding.
+- Aumento do tamanho de fontes.
+- Mais animações.
+- Troca de ícones.
+
+O objetivo é uma mudança visível na experiência inteira.
+
+# 21. VALIDAÇÃO REAL
+
+Execute a aplicação e utilize o navegador disponível.
+
+Registre capturas antes e depois.
+
+Viewports obrigatórios:
+- 1440 × 900.
+- 1366 × 768.
+- 1280 × 720.
+- 1024 × 768.
+- 768 × 1024.
+- 390 × 844.
+- 375 × 812.
+- 320px de largura.
+
+Teste também zoom 125%, 150% e 200%, quando possível.
+
+Valide:
+- Navbar.
+- Hero.
+- Segunda seção.
+- Carrossel.
+- História.
+- Processo.
+- Galeria.
+- Pilares.
+- Vitrine.
+- Modal.
+- Contatos.
+- Footer.
+
+Confira se cada seção ocupa bem o espaço disponível, sem grandes vazios artificiais, sem texto comprimido e sem cortes.
+
+Verifique:
+- Overflow horizontal.
+- Contraste.
+- Carregamento de imagens.
+- Layout shift.
+- Carregamento das fontes.
+- Navegação por teclado.
+- Estados de foco.
+- prefers-reduced-motion.
+- Funcionamento do menu mobile.
+- Filtros.
+- Modal.
+- Links e mensagens de WhatsApp.
+- Console do navegador.
+
+Execute:
+- npm run build.
+- Testes automatizados existentes.
+- Scripts de lint e inspeção da skill, quando disponíveis.
+- Auditoria de qualidade web.
+
+Para a skill design-taste-frontend, corrija todos os FAILs do inspect.mjs, analise os WARNs, execute scenes.mjs para as cenas de rolagem e realize as rodadas de crítica visual previstas.
+
+O resultado deve ser avaliado pelas capturas reais, não pela descrição do código.
+
+# 22. PROTOCOLO DE ENTREGA
+
+Não publique em produção.
+Não faça merge.
+Não envie alterações para a branch principal.
+Não faça push sem autorização.
+
+Ao finalizar, apresente:
+
+**Alterações estruturais**
+O que mudou em cada seção.
+
+**Arquivos efetivamente modificados**
+Lista objetiva de caminhos.
+
+**Skills e agentes utilizados**
+Somente os que realmente foram usados.
+
+**Validação**
+Build, inspeção do navegador, acessibilidade, responsividade e interações.
+
+**Comparativo**
+Capturas reais da versão anterior e da nova versão.
+
+**Materiais pendentes**
+Fotografias, depoimentos, certificações ou conteúdo adicional que dependam da empresa.
+
+**Limitações**
+Qualquer teste que não foi possível executar.
+
+Não declare a aplicação concluída apenas porque o build compila.
+
+---
+
+# CRITÉRIO FINAL
+
+O site deve parecer uma experiência digital completa, construída especificamente para a Armindo Ramalho Empreendimentos.
+
+O visitante precisa enxergar:
+- A empresa.
+- Sua história.
+- Suas obras.
+- Seu processo.
+- Sua capacidade de execução.
+- Suas frentes de atuação.
+- Sua credibilidade.
+- Como entrar em contato.
+
+Não quero apenas um Hero bonito com o restante da página parecendo um template.
+
+**Quero que cada seção pareça parte de um projeto profissional finalizado, com composição própria, conteúdo completo, excelente adaptação de tela e identidade visual consistente.**
